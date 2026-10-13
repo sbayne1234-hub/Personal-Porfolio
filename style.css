@@ -12,8 +12,8 @@ body {
     position: relative;
     isolation: isolate;
     overflow-x: hidden;
-    background:
-    radial-gradient(ellipse at 50% 35%, rgba(37, 57, 112, 0.35), transparent 55%),
+    background-image:
+        radial-gradient(ellipse at 50% 35%, rgba(37, 57, 112, 0.35), transparent 55%),
         linear-gradient(
             180deg,
             #02040b 0%,
@@ -22,7 +22,10 @@ body {
             #20335e 75%,
             #626bc2 100%
         );
-    background-attachment: fixed;
+    background-size: 100% 100%, 100% 200%;
+    background-position: center top, center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #f7f7ff;
     line-height: 1.7;
@@ -31,7 +34,7 @@ body::before, body::after {
     content: '';
     position: absolute;
     inset: 0;
-    left: 0;
+    height: 100%;
     width: 100%;
     pointer-events: none;
     z-index: -1;
@@ -65,4 +68,94 @@ body::after {
     background-repeat: repeat;
     opacity: 0.8;
     animation: nearbyStars 55s linear infinite;
+}
+@keyframes distantStars {
+    from {transform: translate3d(0, 0, 0);} to {transform: translate3d(-25px, 120px, 0);}
+}
+@keyframes nearbyStars {
+    from {transform: translate3d(0, 0, 0);} to {transform: translate3d(35px, 220px, 0);}
+}
+.container {
+    position: relative;
+    z-index: 1;
+    width: min(950px, calc(100% - 36px));
+    margin: 40px auto;
+    padding: 35px;
+    background: rgba(5, 10, 27, 0.36);
+    border: 1px solid rgba(190, 204, 255, 0.16);
+    border-radius: 26px;
+    box-shadow: 0 0 50px rgba(80, 108, 205, 0.10), 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+header {
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 15px;
+    margin-bottom: 35px;
+    text-align: center;
+    background: radial-gradient(ellipse at center, rgba(92, 117, 204, 0.17), transparent 72%);
+    border-bottom: 1px solid rgba(196, 207, 255, 0.2);
+}
+header h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(160, 180, 255, 0.6), 0 0 35px rgba(97, 121, 231, 0.3);
+}
+header p {
+    max-width: 600px;
+    margin: 18px auto 0;
+    color: #c6d4ff;
+}
+section {
+    margin-bottom: 28px;
+    padding: 28px;
+    background: linear-gradient(135deg, rgba(118, 140,218, 0.12), rgba(18, 27, 57, 0.35));
+    border: 1px solid rgba(192, 204, 255, 0.16);
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+section:hover {
+    transform: translateY(-4px);
+    border-color: rgba(177, 194, 255, 0.4);
+    background: linear-gradient(135deg, rgba(118, 140, 218, 0.17), rgba(18, 27, 57, 0.45));
+}
+h2 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    font-size: 1.65rem;
+    color: #d8dfff;
+    border-bottom: 1px solid rgba(165, 185, 255, 0.45);
+    text-shadow: 0 0 12px rgba(126, 156, 255, 0.2);
+}
+section p:last-child {
+    margin-bottom: 0;
+}
+#about img {
+    display: block;
+    width: min(100%, 280px);
+    max-height: 350px;
+    object-fit: cover;
+    margin: 10px auto 25px;
+    border: 2px solid rgba(170, 190, 255, 0.65);
+    border-radius: 22px;
+    box-shadow: 0 0 25px rgba(103, 135, 255, 0.2), 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+a {
+    color: #c6d5ff;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(170, 190, 255, 0.9);
+}
+#contact {
+    margin-bottom: 0;
+    background: linear-gradient(135deg, rgba(83, 112, 190, 0.17), rgba(106, 92, 183, 0.12));
 }
