@@ -67,3 +67,79 @@
     transform: translateY(-5px);
     border-color: rgba(190, 204, 255, 0.55)
 }
+.milestone-art {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 115px;
+    border-bottom: 1px solid rgba(190, 204, 255, 0.12);
+    background: radial-gradient(ellipse at center, rgba(120, 1140, 255, 0.13), transparent 70%);
+}
+.milestone-art::before {
+    position: absolute;
+    width: 100px;
+    height: 36px;
+    border: 1px solid rgba(210, 220, 255, 0.65);
+    border-radius: 50%;
+    content: "";
+    transform: rotate(-25deg);
+}
+.milestone-art::after {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #eee3ff, #bca4ff 30%, #7864c9 65%, #29275f);
+    box-shadow: 0 0 25px rgba(154, 137, 255, 0.25);
+    content: "";
+}
+.milestone-art span {
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    left: 25px;
+    color: #e1e8ff;
+    font-size: 22px;
+}
+.planet-blue::after {
+    background: radial-gradient(circle at 30% 25%, #e3f5ff, #9bcaff 30%, #557fd3 65%, #202c62);
+}
+.planet-pink::after {
+    background: radial-gradient(circle at 30% 25%, #ffe8ff, #e7a8e9 30%, #a45eae 65%, #452752);
+}
+.planet-teal::after {
+    background: radial-gradient(circle at 30% 25%, #e0ffff, #8de0e7 30%, #438fae 65%, #203a64);
+}
+.mile-content {
+    padding: 24px;
+}
+.mile-number {
+    margin: 0;
+    color: #b8c8ff;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+}
+.mile-content h3 {
+    margin: 14px 0 10px;
+    color: #edf0ff;
+    font-size: 1.3rem;
+}
+.mile-content p:not(.mile-number) {
+    margin: 0;
+    color: #c5cfea;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+.milestones-footer {
+    padding: 25px 15px 10px;
+    border-top: 1px solid rgba(190, 204, 255, 0.15);
+    text-align: center;
+}
+.milestones-footer p {
+    font-size: 0.85rem;
+    color: #bfcaff;
+}
+.milestones-footer a {
+    font-size: 0.85rem;
+    text-align: center;
+}
