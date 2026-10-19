@@ -1,0 +1,69 @@
+.milestones-header {
+    min-height: 230px;
+    padding: 35px 15px;
+}
+.milestone-eyebrow {
+    margin: 0 0 12px;
+    color: #bfcaff;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+.milestones-header h1 {
+    margin: 0;
+}
+.milestones-header div > p:not(.milestone-eyebrow) {
+    max-width: 600px;
+    margin: 16px auto 0;
+}
+.home-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding:8px 16px;
+    border: 1px solid rgba(190, 204, 255, 0.3);
+    border-radius: 24px;
+    background: rgba(100, 125, 210, 0.12);
+    text-decoration: none;
+}
+.milestones-page {
+    margin-bottom: 0;
+    padding: 35px 20px;
+    border: none;
+    background: rgba(5, 10, 27, 0.18);
+    box-shadow: none;
+    transition: none;
+}
+.milestones-page:hover {
+    transform: none;
+    background: rgba(5, 10, 27, 0.18)
+}
+.mile-intro {
+    max-width: 620px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+.mile-intro p {
+    color: #c6d4ff;
+}
+.mile-intro h2 {
+    color: #e1e7ff;
+}
+.mile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 850ps;
+    margin: auto;
+}
+.mile-card {
+    overflow: hidden;
+    min-width: 0;
+    border: 1px solid rgba(190, 204, 255, 0.22);
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(30, 42, 83, 0.88), rgba(7, 13, 32, 0.95));
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.mile-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(190, 204, 255, 0.55)
+}
